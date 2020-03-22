@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+.container {
+  width: 300px;
+  border-style: solid; color: red;
+  position: relative;
+}
+
+.position {
+  text-align: center;
+}
+
+.number {
+  color: rebeccapurple;
+  font-size: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
