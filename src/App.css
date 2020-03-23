@@ -37,14 +37,27 @@
   }
 }
 
-.container {
+.outer-container {
+  width: 700px;
+  border-style: solid;
+  position: relative;
+  margin: 100px;
+  padding: 200px;
+}
+
+.container-1 {
   width: 300px;
   border-style: solid; color: red;
   position: relative;
+  z-index: 1;
 }
 
-.position {
-  text-align: center;
+.container-2 {
+  top: -150px;
+  left: 150px;
+  width: 300px;
+  position: relative;
+  border-style: solid; color: rgb(16, 169, 196);
 }
 
 .number {
