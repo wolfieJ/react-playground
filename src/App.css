@@ -3,6 +3,11 @@
   font-family: Calibri;
 }
 
-.CountersSpacing {
-  padding-top: 20px;
+.AlignCenter {
+  text-align: center;
+}
+
+.SubmitButton {
+  color: black;
+  background-color: green;
 }

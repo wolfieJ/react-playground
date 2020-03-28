@@ -1,21 +1,28 @@
 import React,  { useState } from 'react';
+import useForm from './useForm';
 import './App.css';
 
-const App = () => {
-  const [count, updateCount] = useState({count1: 10, count2: 20});
-  const { count1, count2 } = count;
-  const incrementOnClick = () => updateCount(currentState => ({...currentState, count1: currentState.count1 + 1, count2: currentState.count2 + 10}));
-  const decrementOnClick = () => updateCount(currentState => ({...currentState, count1: currentState.count1 - 1, count2: currentState.count2 - 10}));
+const App = () => { 
+  const [form, setForm] = useForm({email: '', password: ''});
 
   return (    
-  <>
-    <button onClick={() => incrementOnClick()}>Increment + </button>
-    <button onClick={() => decrementOnClick()}>Decrement - </button>
-    <div className="CountersSpacing">
-      <div>Count 1: {count1}</div>
-      <div>Count 2: {count2}</div>
+    <div className="AlignCenter">
+      <input 
+        name="email"
+        placeholder="email"
+        value={form.email}
+        onChange={setForm}
+      />
+      <input
+        type="password"
+        name="password"
+        placeholder="password"
+        value={form.password}
+        onChange={setForm}
+      />
+      <button className="SubmitButton" onClick={() => console.log(form)}>Submit</button>
     </div>
-  </>)
+  )
 }
 
 export default App;
