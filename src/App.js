@@ -1,9 +1,13 @@
-import React,  { useState } from 'react';
+import React,  { useEffect } from 'react';
 import useForm from './useForm';
 import './App.css';
 
 const App = () => { 
   const [form, setForm] = useForm({email: '', password: ''});
+
+  useEffect(() => {
+    document.title=form.email;
+  }, [form.email])
 
   return (    
     <div className="AlignCenter">
